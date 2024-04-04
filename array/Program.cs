@@ -11,10 +11,11 @@ namespace array
     {
         static void Main(string[] args)
         {
-            BusRoute route40 = new BusRoute(40, "Moorecambe", "Preston");
-            BusRoute route42 = new BusRoute(42, "Lancaster", "Blackpool");
 
-            BusRoute[] routes = { route40, route42, new BusRoute(100, "University", "Morecambe"), new BusRoute(555, "Lancaster", "Kswick") };
+            BusRoute route40 = new BusRoute(40, ["Moorecambe", "Preston"]);
+            BusRoute route42 = new BusRoute(42, ["Lancaster", "Blackpool"]);
+
+            BusRoute[] routes = { route40, route42, new BusRoute(100, ["University", "Morecambe"]), new BusRoute(555, ["Lancaster", "Kswick"]) };
 
             BusRoute firsRoute = routes[0];
             Console.WriteLine("Primera ruta: " + routes[0]);

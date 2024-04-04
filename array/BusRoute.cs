@@ -9,14 +9,15 @@ namespace array
     public class BusRoute
     {
         public int Number { get; }
-        public string Origin { get; }
-        public string Destination { get; }
+        public string Origin => PlaceServer[0];
+        public string Destination => PlaceServer[1];
 
-        public BusRoute(int number, string origin, string destination)
+        public string[] PlaceServer { get; }
+
+        public BusRoute(int number, string[] placesServed)
         {
             this.Number = number;
-            this.Origin = origin;
-            this.Destination = destination;
+            this.PlaceServer = placesServed;
         }
         public override string ToString() => $"{Number}: {Origin} -> {Destination}";
     }
