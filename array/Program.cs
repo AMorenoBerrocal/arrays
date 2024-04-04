@@ -55,6 +55,25 @@ namespace array
                 Console.WriteLine("No hay viaje para ir a " + location);
             }
 
+            BusRoute[] allRoutes = new BusRoute[4];
+
+            Console.WriteLine($"Antes habia {allRoutes.Length} rutas: ");
+            foreach (BusRoute route in routes)
+            {
+                Console.WriteLine($"Rutas: {route}");
+            }
+
+            Array.Resize(ref allRoutes, 4);
+
+            Console.WriteLine("Ahora hay: ");
+            foreach (BusRoute route in allRoutes)
+            {
+                Console.WriteLine("Rutas: " + route);
+            }
+
+
+
+
         }
 
         public static BusRoute FindBusTo(BusRoute[] routes, string location)
