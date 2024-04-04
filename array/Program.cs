@@ -44,6 +44,28 @@ namespace array
             rutas[2] = routes[2];
             rutas[3] = routes[3];
 
+            Console.WriteLine("Donde quieres ir?");
+            string location = Console.ReadLine();
+
+            if(FindBusTo(routes, location)!=null) {
+                Console.WriteLine("Hay viaje para ir a " + location);
+            } else
+            {
+                Console.WriteLine("No hay viaje para ir a " + location);
+            }
+
+        }
+
+        public static BusRoute FindBusTo(BusRoute[] routes, string location)
+        {
+            foreach(BusRoute route in routes)
+            {
+                if(route.Origin == location || route.Destination == location)
+                {
+                    return route;
+                }
+            }
+            return null;
         }
 
 
