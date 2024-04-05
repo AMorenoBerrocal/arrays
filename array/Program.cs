@@ -71,6 +71,19 @@ namespace array
                 Console.WriteLine("Rutas: " + route);
             }
 
+            Console.WriteLine("Lista de buses: ");
+            List<BusRoute> listaBuses = BusRoute.InitializateRoutes();
+            foreach(BusRoute route in listaBuses)
+            {
+                Console.WriteLine(route);
+            }
+            Console.WriteLine("La lista tiene " + listaBuses.Count + " buses");
+            listaBuses.RemoveAll(route => route.Origin.StartsWith("Test "));
+            Console.WriteLine("Lista de buses despues de eliminar los que empiezan por Test: ");
+            foreach (BusRoute route in listaBuses)
+            {
+                Console.WriteLine(route);
+            }
 
 
 
