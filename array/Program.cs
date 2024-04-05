@@ -87,6 +87,18 @@ namespace array
                 Console.WriteLine(route);
             }
 
+            Console.WriteLine("¿Qué ruta deseas comprobar? ... ");
+            int numRuta = int.Parse(Console.ReadLine());
+            Dictionary<int, BusRoute> diccionario = BusRoute.InitializateRoutesDict();
+            if(diccionario.ContainsKey(numRuta))
+            {
+                Console.WriteLine("La ruta " + numRuta + " está dentro de la colección de datos");
+            } else
+            {
+                Console.WriteLine("La ruta " + numRuta + " no está dentro de la colección de datos");
+            }
+
+
 
 
         }

@@ -44,7 +44,7 @@ namespace array
             return result;
         }
 
-        public static Dictionary<int, BusRoute> InitializateRoutes()
+        public static Dictionary<int, BusRoute> InitializateRoutesDict()
         {
             var listaBuses = new Dictionary<int, BusRoute>();
             BusRoute ruta40 = new BusRoute(40, new string[] { "Morecambe", "Lancaster", "Garstang", "Preston" });
