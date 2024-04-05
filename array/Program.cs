@@ -100,8 +100,7 @@ namespace array
 
             //Prueba
 
-
-
+            HashSet<BusRoute> setRutas = new HashSet<BusRoute>(routes);
 
         }
 
