@@ -43,5 +43,22 @@ namespace array
             result.Add(new BusRoute(5, new string[] { "Overton", "Morecamba", "Carnforth" }));
             return result;
         }
+
+        public static Dictionary<int, BusRoute> InitializateRoutes()
+        {
+            var listaBuses = new Dictionary<int, BusRoute>();
+            BusRoute ruta40 = new BusRoute(40, new string[] { "Morecambe", "Lancaster", "Garstang", "Preston" });
+            BusRoute ruta42 = new BusRoute(42, new string[] { "Lancaster", "Garstang", "Blackpool" });
+            BusRoute ruta1_00 = new BusRoute(1_00, new string[] { "Test origin", "Test destination" });
+            BusRoute ruta5 = new BusRoute(5, new string[] { "Overton", "Morecamba", "Carnforth" });
+
+            listaBuses.Add(40, ruta40);
+            listaBuses.Add(42, ruta42);
+            listaBuses.Add(1_00, ruta1_00);
+            listaBuses.Add(5, ruta5);
+
+            return listaBuses;
+            
+        }
     }
 }
